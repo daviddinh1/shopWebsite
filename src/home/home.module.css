@@ -1,0 +1,16 @@
+.productContainer{
+ display: flex;
+ gap: 5px;
+}
+
+.products{
+ width: 100px;
+ height: 100px;
+}
+
+.homeContainer{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
