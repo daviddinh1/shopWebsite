@@ -8,6 +8,7 @@ const Home = () => {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
   const [loading,setLoading] = useState(true);
+  
 
   useEffect(()=>{
     fetch('https://fakestoreapi.com/products?limit=5')
@@ -19,9 +20,13 @@ const Home = () => {
 
   if (loading) return <Load/>;
   if (error) return <Error errorType={error}/>;
-
+  console.log('product', products);
   return(
     <div className={styles.homeContainer}>
+      <div>
+        <div>logo</div>
+        <div>cart</div>
+      </div>
       <h1>All Products</h1>
       <div className = {styles.productContainer}>
         {products.map((product,index) => (
